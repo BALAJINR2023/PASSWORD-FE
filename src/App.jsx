@@ -12,14 +12,13 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Register />} /> {/* Set Login as the default route */}
+        <Route path="/" element={<ProtectedRoute component={<Home />} />}/> {/* Set Login as the default route */}
         <Route path='/register' element={<Register />} />
         <Route path='/login' element={<Login />} />
         <Route path="/verify/:token" element={<EmailVerification />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/reset-password/:token" element={<ResetPassword />} />
-        <Route path="/home" element={<ProtectedRoute component={<Home />} />} /> {/* Protected route */}
-      </Routes>
+        </Routes>
     </BrowserRouter>
   );
 }

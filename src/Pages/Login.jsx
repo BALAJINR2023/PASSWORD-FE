@@ -16,7 +16,7 @@ const Login = () => {
     if (data.code === 1) {
       localStorage.setItem("isAuthenticated", true);
       localStorage.setItem("token", data.token);
-      navigate("/home"); // redirect to home page
+      navigate("/"); // redirect to home page
     } else {
       alert("Please check Your Credentials");
     }
