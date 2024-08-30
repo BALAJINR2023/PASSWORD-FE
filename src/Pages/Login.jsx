@@ -16,14 +16,14 @@ const Login = () => {
     if (data.code === 1) {
       localStorage.setItem("isAuthenticated", true);
       localStorage.setItem("token", data.token);
-      navigate("/"); // redirect to home page
+      navigate("/home"); // redirect to home page
     } else {
       alert("Please check Your Credentials");
     }
   };
 
   if (isAuthenticated) {
-    return <Navigate to="/" />;
+    return <Navigate to="/home" />;
   }
 
 
