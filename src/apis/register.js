@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { Url } from './constants';
-
+console.log("Backend URL:", Url);
 const userSignup = async (userData) => {
     try {
         const response = await axios.post(`${Url}/register`, userData, {
